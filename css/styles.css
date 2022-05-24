@@ -18,6 +18,28 @@ body {
 .button {
   cursor: pointer;
 }
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+img {
+  display: block;
+}
+
+* {
+  outline: 1px solid tomato;
+}
 /* LOGO SECTION */
 .logo {
   font-family: Raleway;
