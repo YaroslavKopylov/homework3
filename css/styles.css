@@ -17,29 +17,41 @@ body {
 
 .button {
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 1px solid tomato;
 }
 
 h1,
 h2,
 h3,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
+/* 
+li {
+  display: inline-block;
+} */
 
 ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
   display: block;
 }
 
-* {
-  outline: 1px solid tomato;
-}
+/* * {
+  outline: 1px solid tomato; */
+/* } */
 /* LOGO SECTION */
 .logo {
   font-family: Raleway;
@@ -47,6 +59,8 @@ img {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+  margin-bottom: 25px;
+  justify-content: start;
 }
 
 .logo-web {
@@ -63,7 +77,12 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
+
 }
+
+
+
+
 .link.current {
   color: var(--accent-color);
 }
@@ -95,16 +114,20 @@ img {
 }
 /* HERO SECTION */
 .hero {
+  text-align: center;
   background-color: var(--secondary-bgc);
+
+ 
 }
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
+  margin-bottom: 30px;
+
 }
 .hero-btn {
   font-family: Roboto;
@@ -112,8 +135,8 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  text-align: center;
   letter-spacing: 0.06em;
+  padding: 10px 32px;
   color: #fff;
   background-color: var(--accent-color);
 }
@@ -126,17 +149,45 @@ img {
 .benefits-list .benefits-title {
   color: var(--general-black-color);
 }
+
+.benefits-section {
+  padding: 94px 215px;
+}
+
+.benefits-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.benefits-list {
+  display: flex;
+  justify-content: center;
+  min-height: 101px;
+  min-width: 270px;
+}
+
 .benefits-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  outline: 1px solid tomato;
+  padding-bottom: 10px;
 }
 
 .benefits-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  outline: 1px solid tomato;
 }
 /* ABOUT US SECTION */
 
@@ -146,7 +197,16 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--general-black-color);
+  outline: 1px solid tomato;
+  padding-bottom: 50px;
 }
+
+.about-list {
+  display: flex;
+  justify-content: center;
+}
+
+
 /* OUR TEAM SECTION */
 .team-section {
   background-color: var(--team-section-bgc);
@@ -158,6 +218,17 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--general-black-color);
+  padding-bottom: 50px;
+}
+
+
+  
+
+
+.team-list   {
+  display: flex;
+  justify-content: center;
+  
 }
 
 .team-name-title {
@@ -165,12 +236,26 @@ img {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+  padding-bottom: 10px;
+  background-color: #fff;
+  width: 270px;
+  text-align:center;
+  
+  
 }
+
 
 .team-position {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+  background-color: #fff;
+  display: inline-block;
+  width: 270px;
+  text-align: center;
+
+  
+
 }
 
 .team-list .team-name-title {
@@ -216,6 +301,7 @@ img {
 }
 
 .footer-section {
+  outline: 1px solid tomato;
   background-color: var(--secondary-bgc);
 }
 /* ~~~~~~~~~~~~PORTFOLIO  ~~~~~~~~~~~~*/
@@ -226,6 +312,7 @@ img {
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
   color: var(--general-black-color);
   background-color: #f5f4fa;
 }
