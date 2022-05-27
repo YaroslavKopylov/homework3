@@ -11,6 +11,11 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .list {
   list-style: none;
 }
@@ -25,8 +30,8 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
-  outline: 1px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
@@ -35,10 +40,6 @@ h3,
 p {
   margin: 0;
 }
-/* 
-li {
-  display: inline-block;
-} */
 
 ul {
   margin: 0;
@@ -47,11 +48,18 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* * {
-  outline: 1px solid tomato; */
-/* } */
+/* PAGE HEADER */
+
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
 /* LOGO SECTION */
 .logo {
   font-family: Raleway;
@@ -59,8 +67,6 @@ img {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  margin-bottom: 25px;
-  justify-content: start;
 }
 
 .logo-web {
@@ -71,17 +77,42 @@ img {
   color: var(--general-black-color);
 }
 /* NAV SECTION */
-.menu {
+.menu-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
-
+  display: flex;
+  margin-left: 92px;
 }
 
+.menu-auth {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
 
+.nav-section {
+  display: flex;
+  align-items: center;
+}
 
+.menu-link .menu-list-item {
+  margin-right: 50px;
+}
+
+.menu-link .menu-list-item:last-child {
+  margin: 0;
+}
+
+.menu-auth .menu-nav-list + .menu-nav-list {
+  margin-left: 50px;
+}
 
 .link.current {
   color: var(--accent-color);
@@ -112,12 +143,11 @@ img {
 .link:focus {
   color: var(--accent-color);
 }
+
 /* HERO SECTION */
 .hero {
   text-align: center;
   background-color: var(--secondary-bgc);
-
- 
 }
 .hero-title {
   font-weight: 900;
@@ -127,7 +157,6 @@ img {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 30px;
-
 }
 .hero-btn {
   font-family: Roboto;
@@ -150,10 +179,6 @@ img {
   color: var(--general-black-color);
 }
 
-.benefits-section {
-  padding: 94px 215px;
-}
-
 .benefits-header {
   position: absolute;
   width: 1px;
@@ -167,27 +192,29 @@ img {
   overflow: hidden;
 }
 
-.benefits-list {
-  display: flex;
-  justify-content: center;
-  min-height: 101px;
-  min-width: 270px;
-}
-
 .benefits-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  outline: 1px solid tomato;
+
   padding-bottom: 10px;
+}
+
+.benefits-list li + li {
+  margin-left: 30px;
+}
+
+.benefits-list {
+  display: flex;
 }
 
 .benefits-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  outline: 1px solid tomato;
+
+  min-width: 270px;
 }
 /* ABOUT US SECTION */
 
@@ -197,7 +224,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--general-black-color);
-  outline: 1px solid tomato;
+
   padding-bottom: 50px;
 }
 
@@ -206,6 +233,9 @@ img {
   justify-content: center;
 }
 
+.about-list li + li {
+  margin-left: 30px;
+}
 
 /* OUR TEAM SECTION */
 .team-section {
@@ -218,17 +248,16 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--general-black-color);
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
-
-  
-
-
-.team-list   {
+.team-list {
   display: flex;
   justify-content: center;
-  
+}
+
+.team-list li + li {
+  margin-left: 30px;
 }
 
 .team-name-title {
@@ -236,28 +265,23 @@ img {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  padding-bottom: 10px;
-  background-color: #fff;
-  width: 270px;
-  text-align:center;
-  
-  
+  text-align: center;
 }
-
 
 .team-position {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  background-color: #fff;
-  display: inline-block;
-  width: 270px;
   text-align: center;
-
-  
-
 }
-
+.subteam {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .team-list .team-name-title {
   color: var(--general-black-color);
 }
@@ -280,10 +304,17 @@ img {
   letter-spacing: 0.03em;
   color: #fff;
   text-decoration: none;
+  display: inline-block;
+  margin-bottom: 9px;
 }
 .footer-mail:hover,
 .footer-mail:focus {
   color: var(--accent-color);
+}
+
+.footer-mail {
+  display: inline-block;
+  margin-bottom: 9px;
 }
 
 .footer-tel:hover,
@@ -300,14 +331,34 @@ img {
   color: #fff;
 }
 
+.logo-footer {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .footer-section {
-  outline: 1px solid tomato;
   background-color: var(--secondary-bgc);
 }
 /* ~~~~~~~~~~~~PORTFOLIO  ~~~~~~~~~~~~*/
 
 /* FILTER */
-
+.portfolio-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .filter-btn {
   font-size: 16px;
   line-height: 1.6;
@@ -323,6 +374,16 @@ img {
   background-color: var(--accent-color);
 }
 
+.filter-list-btn li + li {
+  margin-left: 8px;
+}
+
+.filter-list-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 /* OUR WORKS */
 .works-title {
   font-size: 18px;
@@ -334,6 +395,25 @@ img {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
+
+.our-works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.aaa:nth-child(-n + 6) {
+  margin-bottom: 30px;
+}
+
+.sub-works-title {
+  padding: 20px 24px;
+  background-color: #fff;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
 .our-works .works-title {
   color: var(--general-black-color);
 }
