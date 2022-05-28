@@ -94,6 +94,7 @@ img {
   letter-spacing: 0.02em;
   list-style: none;
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -146,6 +147,8 @@ img {
 
 /* HERO SECTION */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   background-color: var(--secondary-bgc);
 }
@@ -197,11 +200,10 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.benefits-list li + li {
+.benefits-list .benefits-list-item + .benefits-list-item{
   margin-left: 30px;
 }
 
@@ -218,6 +220,10 @@ img {
 }
 /* ABOUT US SECTION */
 
+.about-section {
+  padding-top: 0;
+}
+
 .about-title {
   font-size: 36px;
   line-height: 1.17;
@@ -225,7 +231,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--general-black-color);
 
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .about-list {
@@ -233,7 +239,7 @@ img {
   justify-content: center;
 }
 
-.about-list li + li {
+.about-list .about-list-item + .about-list-item {
   margin-left: 30px;
 }
 
@@ -263,14 +269,15 @@ img {
 .team-name-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .team-position {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -305,8 +312,16 @@ img {
   color: #fff;
   text-decoration: none;
   display: inline-block;
+  
+}
+
+ .footer-contact-item {
   margin-bottom: 9px;
 }
+.footer-contact-item:last-child {
+  margin-bottom: 0;
+}
+
 .footer-mail:hover,
 .footer-mail:focus {
   color: var(--accent-color);
@@ -314,7 +329,7 @@ img {
 
 .footer-mail {
   display: inline-block;
-  margin-bottom: 9px;
+  
 }
 
 .footer-tel:hover,
@@ -342,6 +357,8 @@ img {
 }
 
 .footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--secondary-bgc);
 }
 /* ~~~~~~~~~~~~PORTFOLIO  ~~~~~~~~~~~~*/
@@ -374,7 +391,7 @@ img {
   background-color: var(--accent-color);
 }
 
-.filter-list-btn li + li {
+.filter-list-btn .filter-list-item + .filter-list-item {
   margin-left: 8px;
 }
 
@@ -400,9 +417,10 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 4px;
 }
 
-.aaa:nth-child(-n + 6) {
+.our-works-item:nth-child(-n + 6) {
   margin-bottom: 30px;
 }
 
