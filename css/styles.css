@@ -144,11 +144,9 @@ img {
 }
 
 .link {
-  
   color: var(--general-black-color);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .link:hover,
@@ -196,8 +194,6 @@ img {
 .nav-tel:focus {
   color: var(--accent-color);
 }
-
-
 
 /* HERO SECTION */
 .hero {
@@ -664,16 +660,42 @@ img {
   color: var(--general-black-color);
 }
 
-.overlay {
- 
+.our-works-item {
+  position: relative;
 
 }
 
 .our-works-list {
-  display: block;
-
+  position: relative;
+  display: inline-block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.overlay-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.our-works-list:hover .overlay-item {
+  transform: translateY(0);
+}
+
 .our-works-list:hover,
 .our-works-list:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
